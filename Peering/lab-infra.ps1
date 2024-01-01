@@ -48,7 +48,7 @@ $eusVm = New-AzVM -Name 'eus-prod-server' `
   -ResourceGroupName $rg `
   -Location eastus `
   -Size 'Standard_B1s' `
-  -Image UbuntuLTS `
+  -Image Ubuntu Minimal 22.04 LTS `
   -VirtualNetworkName eus-vnet `
   -SubnetName 'default' `
   -Credential $credential `
@@ -58,7 +58,7 @@ Write-Host "Creating West US VM" -ForegroundColor "Yellow" -BackgroundColor "Bla
 $wusVm = New-AzVM -Name 'wus-prod-server' `
 -ResourceGroupName $rg `
 -Location westus `
--Image UbuntuLTS `
+-Image Ubuntu Minimal 22.04 LTS `
 -Size 'Standard_B1s' `
 -VirtualNetworkName wus-vnet `
 -SubnetName 'default' `
